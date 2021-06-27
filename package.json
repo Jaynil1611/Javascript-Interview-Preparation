@@ -1,0 +1,23 @@
+{
+  "name": "MockInterview-1",
+  "version": "1.0.0",
+  "description": "This repository contains the javascript interview preparation questions & solutions.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jaynil1611/Javascript-Interview-Preparation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jaynil1611/Javascript-Interview-Preparation/issues"
+  },
+  "homepage": "https://github.com/Jaynil1611/Javascript-Interview-Preparation#readme",
+  "dependencies": {
+    "react": "^17.0.2"
+  }
+}

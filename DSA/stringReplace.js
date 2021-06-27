@@ -1,25 +1,29 @@
-function getSubString(string, start, length) {
-  let output = '';
-  for (let i = start; i < start + length; i++) {
-    output += string[i];
+function checkSubString(string, index, pattern) {
+  for (let i = index, count = 0; i < string.length && count < pattern.length; i++ , count++) {
+    if (string[i] !== pattern[count]) {
+      return false;
+    }
   }
-  return output;
+  return true;
 }
 
-function myReplace(input, pattern, newPattern, replaceAll = true) {
-  let output = "";
-  let flag = true;
-  for (let i = 0; i < input.length; i++) {
-    if (flag && input[i] === pattern[0]) {
-      if (getSubString(input, i, pattern.length) === pattern) {
-        output += newPattern;
-        i += pattern.length - 1;
-        flag = replaceAll;
-      }
-    }
-    else {
-      output += input[i];
+function getSubstring(string, start, end) {
+  let resultString = "";
+  for(let i = start; i < end && i < string.length ; i++){
+    resultString+= string[i];
+  }
+  return resultString;
+};
+
+function myStringReplace(originalString, pattern, replaceString, replaceAll) {
+  let resultString = originalString;
+  for (let i = 0; i < originalString.length; i++) {
+    if (checkSubString(resultString, i, pattern)) {
+      resultString = getSubstring(resultString, 0, i) + replaceString + getSubstring(resultString, i + pattern.length, resultString.length);
+      // console.log(resultString);
     }
   }
-  return output;
+  return resultString;
 }
+
+console.log(myStringReplace('Javascript is awesome!', 'awesome', 'amazing', true));
