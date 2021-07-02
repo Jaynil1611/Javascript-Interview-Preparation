@@ -3,8 +3,7 @@ import "./styles.css";
 
 const useMyMemo = (func, dependencies) => {
   const [values, setValues] = useState([]);
-  const [memoizedValue, setMemoizedValue] = useState(null);
-
+  const [memoizedValue, setMemoizedValue] = useState(func);
   const hasChanged = (dependencies) => {
     return values.length === 0
       ? true
@@ -12,8 +11,8 @@ const useMyMemo = (func, dependencies) => {
   };
 
   if (Array.isArray(dependencies) && hasChanged(dependencies)) {
+    setMemoizedValue(() => func());
     setValues(dependencies);
-    setMemoizedValue(func.call(this));
     console.log("called");
   }
   return memoizedValue;
@@ -33,14 +32,12 @@ const Callback = () => {
     setNumber(Number(e.target.form[0].value));
   };
 
-  const memoizedValue = useMyCallback(() => summation(number), [number]);
-
-  console.log(memoizedValue);
+  const memoizedFunc = useMyCallback(() => summation(number), [number]);
 
   return (
     <>
       <div>
-        <h2>{memoizedValue}</h2>
+        <h2>{memoizedFunc()}</h2>
         <form>
           <input
             name="number-input"
