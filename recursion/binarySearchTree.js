@@ -97,11 +97,13 @@ function BinarySearchTree() {
 
 const tree = new BinarySearchTree();
 let root = null;
-root = tree.insertNode(root,5);
-root = tree.insertNode(root,2);
-root = tree.insertNode(root,9);
+root = tree.insertNode(root, 5);
+root = tree.insertNode(root, 2);
+root = tree.insertNode(root, 9);
 tree.inorderTraversal(root);
 console.log(tree.searchNode(root, 2));
 tree.preorderTraversal(root);
 root = tree.deleteNode(root, 5);
 console.log(root);
+
+module.exports = { BinarySearchTree };
