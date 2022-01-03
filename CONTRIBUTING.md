@@ -9,7 +9,7 @@ The following is a set of guidelines for contributing to [Javascript-Interview-P
 In this guide you will get an overview of the contribution workflow from opening an issue, creating a PR, reviewing, and merging the PR. These are mostly guidelines, not rules.  
 Use your best judgment, and feel free to propose changes to this repository thorugh a pull request.
 
-Please note we have a [code of conduct](/CODE_OF_CONDUCT.md), please follow it in all your interactions with the project to keep our community approachable and respectable.
+Please note we have a [code of conduct](./CODE_OF_CONDUCT.md), please follow it in all your interactions with the project to keep our community approachable and respectable.
 
 Use the table of contents icon on the top left corner of this document to get to a specific section of this guide quickly.    
 
@@ -74,4 +74,4 @@ For further guidance about creating a new issue, please refer to the related lin
 In order to sanitize coding standards, please follow [this style guide](https://github.com/airbnb/javascript).
 
 # License
-By contributing, you agree that your contributions will be licensed under its [MIT License](LICENSE).
+By contributing, you agree that your contributions will be licensed under its [MIT License](./LICENSE).
