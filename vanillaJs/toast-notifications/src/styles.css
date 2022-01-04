@@ -1,0 +1,39 @@
+body {
+  font-family: sans-serif;
+}
+
+.toast__notifications {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+}
+
+/* Separate normal notification from error notification */
+.toast__notifications__error {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 5px;
+  top: 10px;
+}
+
+/* common style for a toast notification*/
+.toast {
+  padding: 0.5rem;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+
+.toast__info {
+  background-color: blue;
+}
+
+.toast__warning {
+  background-color: yellow;
+}
+
+.toast__error {
+  background-color: red;
+}
