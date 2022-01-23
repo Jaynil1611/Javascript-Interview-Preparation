@@ -6,4 +6,6 @@ This problem tests css skills as well as knowledge of JavaScript DOM APIs. It is
 
 This can be enhanced more. Further you can add a close button on a toast notification.
 
-Codesandbox [link](https://codesandbox.io/s/toast-notification-h6cut)
+## Solution
+
+Toast Notification Solution [link](https://codesandbox.io/s/toast-notification-h6cut)
