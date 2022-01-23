@@ -8,4 +8,6 @@ After clicking on each cell an alert dialog should popup with respective movie d
 
 If user clicks on "Imdb Ratings" then an alert dialog should popup with movie rating.
 
-CodeSandbox [link](https://codesandbox.io/s/bubbling-problem-8erwc).
+## Solution
+
+Event Delegation Solution [link](https://codesandbox.io/s/bubbling-problem-8erwc).
