@@ -1,0 +1,34 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  cursor: pointer;
+}
+
+.row__item {
+  border: 1px solid black;
+  padding: 1rem;
+}
+
+.item__charac {
+  background-color: orange;
+}
+
+.item__movie {
+  background-color: yellow;
+}
+
+.item__rating {
+  background-color: skyblue;
+}
+
+.rating {
+  padding: 0.5rem;
+  background-color: green;
+  border: 1px slolid green;
+  border-radius: 25px;
+}
