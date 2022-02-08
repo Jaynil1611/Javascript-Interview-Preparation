@@ -27,7 +27,7 @@ body {
   }
   
   .toast__info {
-    background-color: blue;
+    background-color: cyan;
   }
   
   .toast__warning {
