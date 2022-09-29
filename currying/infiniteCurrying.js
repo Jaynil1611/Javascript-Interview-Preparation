@@ -23,10 +23,10 @@
 // };
 
 function infiniteCurryingWithVariableArg(func) {
-  function recursiveCurry(...args){
+  function recursiveCurry(...args) {
     return function(...a) {
-      if(!a.length){
-        return args.reduce((result, value)=>{
+      if (!a.length) {
+        return args.reduce((result, value) => {
           return func.call(func, result, value);
         });
       }
@@ -37,10 +37,10 @@ function infiniteCurryingWithVariableArg(func) {
 };
 
 function infiniteCurrying(func) {
-  function recursiveCurry(...args){
+  function recursiveCurry(...args) {
     return function(a) {
-      if(!a){
-        return args.reduce((result, value)=>{
+      if (!a) {
+        return args.reduce((result, value) => {
           return func.call(func, result, value);
         });
       }
@@ -50,6 +50,7 @@ function infiniteCurrying(func) {
   return recursiveCurry();
 };
 
+// Arrow Functions
 const fn = infiniteCurrying((a, b) => a + b);
 const fn2 = infiniteCurryingWithVariableArg((a, b) => a + b);
 console.log(fn(7)(8)(9)());
