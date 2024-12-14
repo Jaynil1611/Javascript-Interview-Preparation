@@ -1,3 +1,4 @@
 **/.DS_Store
 **/package.json
 **/.codesandbox
+/node_modules
