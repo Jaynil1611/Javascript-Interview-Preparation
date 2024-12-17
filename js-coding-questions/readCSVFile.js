@@ -36,5 +36,3 @@ readInterface.on("close", () => {
 readInterface.on("error", (err) => {
   console.error("Error reading the CSV file:", err);
 });
-
-function readCSVFile() {}
