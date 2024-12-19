@@ -10,7 +10,7 @@ function isFunction(value) {
 }
 
 function isPrimitive(value) {
-  return typeof value !== "object";
+  return value !== Object(value);
 }
 
 function isObject(value) {
@@ -29,14 +29,12 @@ function cloneDeepWithCircularDependency(value, cache = new WeakMap()) {
       cloneDeepWithCircularDependency(element, cache)
     );
   }
-  if (isObject(value)) {
-    const result = {};
-    Object.entries(([key, value]) => {
-      result[key] = cloneDeepWithCircularDependency(value, cache);
-    });
-    cache.set(value, result);
-    return result;
-  }
+  const result = {};
+  cache.set(value, result);
+  Object.entries(value).forEach(([key, value]) => {
+    result[key] = cloneDeepWithCircularDependency(value, cache);
+  });
+  return result;
 }
 
 function A() {}
@@ -47,4 +45,5 @@ a.b = b;
 b.a = a;
 
 const c = cloneDeepWithCircularDependency(a);
-console.log('a' in c.b.a.b);
+console.log("a" in c.b.a.b);
+console.log(c)
